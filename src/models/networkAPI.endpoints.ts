@@ -20,13 +20,13 @@ export type EndpointFileResponse = {
 }
 
 export type CRPayload_ENDPOINT = {
-name: string
-description: string
-value: string
-ref_id: string
-schema_ref: string
-bump: boolean
-status: string
+    name: string
+    description: string
+    value: string
+    ref_id: string
+    schema_ref: string
+    bump: boolean
+    status: string
 }
 
 export type UPPayload_ENDPOINT = UUID & CRPayload_ENDPOINT

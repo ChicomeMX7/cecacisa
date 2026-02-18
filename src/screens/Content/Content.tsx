@@ -20,7 +20,9 @@ export const Content = () => {
 
     return (
         <Screen pannel={PANNELS.CONTENT}>
-            <LeftSidePanel id={PANNEL_ID.CONTENT} showTitle searchable>{'testing content'}</LeftSidePanel>
+            <LeftSidePanel id={PANNEL_ID.CONTENT} showTitle searchable>
+                {'testing content'}
+            </LeftSidePanel>
             <ScreenHeader
                 title={'Título de la tabla actual'}
                 actions={

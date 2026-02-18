@@ -36,7 +36,7 @@ export const createFetch = async (
         .catch((err) => err)
 }
 
-const obtainBaseURL = (baseURL:string,endpoint:string,prefix?:string) => {
+const obtainBaseURL = (baseURL: string, endpoint: string, prefix?: string) => {
     let URL = ''
     if (prefix) {
         URL += `${prefix}/`
@@ -47,7 +47,7 @@ const obtainBaseURL = (baseURL:string,endpoint:string,prefix?:string) => {
 export const createAPIClient = (baseURL: string, prefix?: string) => {
     async function client(endpoint: URL, method: Method, config: FetchConfig) {
         const { responseType } = config
-        let url = obtainBaseURL(baseURL,endpoint,prefix)
+        let url = obtainBaseURL(baseURL, endpoint, prefix)
         let data = config?.data
         const authToken = {
             type: 'Bearer',
@@ -82,6 +82,6 @@ export const createAPIClient = (baseURL: string, prefix?: string) => {
     return client
 }
 
-export const AuthRootURL = createAPIClient(AUTH_API,API_V1)
-export const DataRootURL = createAPIClient(DATA_API,API_V1)
-export const MediaRootURL = createAPIClient(MEDIA_API,API_V1)
+export const AuthRootURL = createAPIClient(AUTH_API, API_V1)
+export const DataRootURL = createAPIClient(DATA_API, API_V1)
+export const MediaRootURL = createAPIClient(MEDIA_API, API_V1)

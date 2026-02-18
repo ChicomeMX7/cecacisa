@@ -4,7 +4,7 @@ export const GraphicMedallion = () => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 85.04 34.02">
             <defs>
-                <linearGradient id="lineGradient" >
+                <linearGradient id="lineGradient">
                     <stop offset="0%" stopColor="#39CC79" />
                     <stop offset="50%" stopColor="#4DD1B2" />
                     <stop offset="100%" stopColor="#EF4FF7" />

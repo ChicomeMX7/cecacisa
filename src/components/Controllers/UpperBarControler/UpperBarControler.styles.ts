@@ -29,7 +29,7 @@ export const LeftSection = styled('div', {
     flexDirection: 'row',
     textOverflow: 'clip',
     minWidth: '200px',
-    marginRight: '-180px'
+    marginRight: '-180px',
 })
 
 export const RightSection = styled('div', {

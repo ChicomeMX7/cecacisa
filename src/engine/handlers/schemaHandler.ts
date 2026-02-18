@@ -7,8 +7,7 @@ export const schemaHandler: SchemaHandlerType = {
         DataRootURL.read(`/data/schema/${mecuateUser.access_token}/list`, {
             params,
         }),
-    getSchema: ({ id }) =>
-        DataRootURL.read(`/data/schema/${mecuateUser.access_token}/${id}`, {}),
+    getSchema: ({ id }) => DataRootURL.read(`/data/schema/${mecuateUser.access_token}/${id}`, {}),
     createSchema: (params) =>
         DataRootURL.create(`/data/schema/${mecuateUser.access_token}/new`, {
             data: params,

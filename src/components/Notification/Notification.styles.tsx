@@ -69,7 +69,7 @@ export const CurveLine = styled('div', {
 })
 
 export const gradients = css({
-    lineGradient: 'linear-gradient(90deg,#2a7b9b 0%, #57c785 50%, #eddd53 100%)'
+    lineGradient: 'linear-gradient(90deg,#2a7b9b 0%, #57c785 50%, #eddd53 100%)',
 })
 
 export const Path = styled('path', {

@@ -11,7 +11,9 @@ export const DatabaseSchemas = () => {
 
     return (
         <Screen pannel={PANNELS.SCHEMAS}>
-            <LeftSidePanel id={PANNEL_ID.SCHEMAS} showTitle>{'testing content'}</LeftSidePanel>
+            <LeftSidePanel id={PANNEL_ID.SCHEMAS} showTitle>
+                {'testing content'}
+            </LeftSidePanel>
             <ScreenHeader
                 title={'Título del esquema seleccionado'}
                 actions={

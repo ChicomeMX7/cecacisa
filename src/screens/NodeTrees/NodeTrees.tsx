@@ -15,7 +15,9 @@ export const NodeTrees = () => {
 
     return (
         <Screen pannel={PANNELS.NODES}>
-            <LeftSidePanel id={PANNEL_ID.NODES} showTitle>{'testing content'}</LeftSidePanel>
+            <LeftSidePanel id={PANNEL_ID.NODES} showTitle>
+                {'testing content'}
+            </LeftSidePanel>
             <ScreenHeader
                 title={'Título del nodo abierto'}
                 actions={

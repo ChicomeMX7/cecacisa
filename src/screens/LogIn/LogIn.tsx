@@ -57,7 +57,7 @@ export const LogIn = () => {
                     .then((response) => response.json())
                     .then((res) => {
                         if (res.status === 'OK') {
-                                window.location.href = '/index.html'
+                            window.location.href = '/index.html'
                         } else {
                             setUserEmail('')
                             setUserPassword('')

@@ -7,8 +7,7 @@ export const nodeHandler: NodeHandlerType = {
         DataRootURL.read(`/data/endpoint/${mecuateUser.access_token}/list`, {
             params,
         }),
-    getNode: ({ id }) =>
-        DataRootURL.read(`/data/endpoint/${mecuateUser.access_token}/${id}`, {}),
+    getNode: ({ id }) => DataRootURL.read(`/data/endpoint/${mecuateUser.access_token}/${id}`, {}),
     createNode: (params) =>
         DataRootURL.create(`/data/endpoint/${mecuateUser.access_token}/new`, {
             data: params,

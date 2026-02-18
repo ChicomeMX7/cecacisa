@@ -17,7 +17,9 @@ export const Endpoints = () => {
 
     return (
         <Screen pannel={PANNELS.ENDPOINTS}>
-            <LeftSidePanel id={PANNEL_ID.ENDPOINTS} showTitle>{'testing content'}</LeftSidePanel>
+            <LeftSidePanel id={PANNEL_ID.ENDPOINTS} showTitle>
+                {'testing content'}
+            </LeftSidePanel>
             <ScreenHeader
                 title={'data_videos.json'}
                 actions={

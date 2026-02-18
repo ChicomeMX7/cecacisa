@@ -1,0 +1,1 @@
+export { useCleanInput } from './useCleanInput'

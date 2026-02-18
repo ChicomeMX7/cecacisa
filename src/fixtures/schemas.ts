@@ -1,0 +1,86 @@
+export const schemasTestData = [
+    {
+        id: '8289c7d4-cc8b-472f-a50d-e87bd59eae0b',
+        name: 'Schema _ 1',
+        changes: 'yesterday 12:35',
+        userReference: 'Pepe',
+    },
+    {
+        id: 'c6e6d4c1-742f-443e-b438-f6e0a16173ef',
+        name: 'Schema _ 2',
+        changes: 'monday 12 9:11',
+        userReference: 'Robert',
+    },
+    {
+        id: 'e08f5961-dc64-428d-935d-755fc0213e6b',
+        name: 'Schema _ e3',
+        changes: 'Saturday 11 10:35',
+        userReference: 'Monica',
+    },
+    {
+        id: '0938353b-0b11-4c17-bef3-3e580c6ce37a',
+        name: 'Schema _ 4r',
+        changes: 'Friday 4 2:55',
+        userReference: 'Yadira',
+    },
+    {
+        id: '7527b9f3-3b56-473b-bb73-5ce9573ddf16',
+        name: 'Schema _ 5yrr',
+        changes: 'yesterday 12:35',
+        userReference: 'Pepe',
+    },
+    {
+        id: 'd368d9d7-0140-43e9-b220-62f036b85d7d',
+        name: 'Schema _ we6',
+        changes: 'monday 12 9:11',
+        userReference: 'Robert',
+    },
+    {
+        id: 'f9f406ab-8f35-4d8e-8e1d-4b285adf832f',
+        name: 'Schema _ 7w',
+        changes: 'Saturday 11 10:35',
+        userReference: 'Monica',
+    },
+    {
+        id: '1e4ce629-cee5-48b6-befa-4363021e25b3',
+        name: 'Schema _ 8',
+        changes: 'Friday 4 2:55',
+        userReference: 'Yadira',
+    },
+    {
+        id: 'b1b51134-b021-49c1-ad67-29b9cd08cc63',
+        name: 'Schema _ 9',
+        changes: 'yesterday 12:35',
+        userReference: 'Pepe',
+    },
+    {
+        id: '5e57ea4d-b477-41bb-be87-fcc14ce8131a',
+        name: 'Schema _ 10',
+        changes: 'monday 12 9:11',
+        userReference: 'Robert',
+    },
+    {
+        id: 'c553f1df-3c09-48b5-a409-a1b573c52e9a',
+        name: 'Schema _ 11',
+        changes: 'Saturday 11 10:35',
+        userReference: 'Monica',
+    },
+    {
+        id: '0ecadeb6-cb85-4eb8-8165-50b40f2d49d5',
+        name: 'Schema _ 12',
+        changes: 'Friday 4 2:55',
+        userReference: 'Yadira',
+    },
+    {
+        id: 'a7d87434-0ddd-425a-a05a-3a5e0fb101f6',
+        name: 'Schema _ 13',
+        changes: 'Saturday 11 10:35',
+        userReference: 'Monica',
+    },
+    {
+        id: '7d9cb54b-d882-4590-b06d-36adce42930a',
+        name: 'Schema _ 14',
+        changes: 'Friday 4 2:55',
+        userReference: 'Yadira',
+    },
+]

@@ -1,0 +1,20 @@
+{
+    "menu": {
+        "home": "Dashboard",
+        "schemas": "Schemas",
+        "content": "Contenidos",
+        "endpoints": "Endpoints",
+        "nodes": "Nodos",
+        "uploads": "Uploads",
+        "user": "Usuario",
+        "logout": "Cerrar sesión"
+    },
+    "leftPannelTitle": {
+        "content": "Archivos",
+        "schemas": "Listado",
+        "endpoints": "Scripts",
+        "nodes": "Inventario",
+        "user": "Perfil",
+        "uploads": "Media"
+    }
+}

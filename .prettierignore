@@ -1,0 +1,12 @@
+# fodler
+dist/
+buid/
+# public/
+node_modules/
+
+# files
+.prettierrc.json
+*.yml
+.eslintcache
+yarn-error.log
+jest.config.js

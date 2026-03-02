@@ -212,8 +212,8 @@ module.exports = exports = {
         // 'operator-assignment': [ERROR, 'never'],
         // 'operator-linebreak': [ERROR, 'after'],
         // 'padded-blocks': [ERROR, 'never'],
-        // 'quote-props': [ERROR, 'consistent-as-needed'],
-        // quotes: [ERROR, 'single'],
+        'quote-props': [ERROR, 'consistent-as-needed'],
+        quotes: [ERROR, 'single'],
         // 'require-jsdoc': [
         //     ERROR,
         //     {

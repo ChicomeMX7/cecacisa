@@ -12,7 +12,7 @@
     "braceStyle": "stroustrup",
     "trailingComma": "es5",
     "proseWrap": "preserve",
-    "quoteProps": "consistent",
+    "quoteProps": "as-needed",
     "requirePragma": false,
     "useTabs": false,
     "tabWidth": 4,

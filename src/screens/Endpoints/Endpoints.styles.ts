@@ -5,7 +5,7 @@ export const Container = styled('div', {
     position: 'relative',
     padding: 1,
     margin: 0,
-    overflow: 'auto',
+    // overflow: 'auto',
     width: '100%',
     height: '100%',
 })

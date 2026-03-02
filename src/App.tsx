@@ -9,7 +9,7 @@ import { QueryClientProvider, QueryClient } from 'react-query'
 import { useRef } from 'react'
 import { networkHandlers } from 'context/NetworkContext/network.implementation'
 import { TogglePannelContextProvider } from 'context/ToggleRightPannel/ToogleRPannel'
-import { Notification } from 'components/Notification'
+// import { Notification } from 'components/Notification'
 
 function App() {
     const queryClient = useRef<QueryClient>()
@@ -33,7 +33,6 @@ function App() {
                     </LocalStorageContextProvider>
                 </SectionCoordinatorProvider>
             </APINetworkProvider>
-            <Notification.Error action={() => {}} />
         </QueryClientProvider>
     )
 }

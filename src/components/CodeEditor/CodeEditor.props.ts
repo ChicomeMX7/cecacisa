@@ -12,10 +12,16 @@ export const PASS = {
     javascript: false,
 }
 
+export type ToolbarConfig = (string | object)[][]
+
 export type CodeEditorProps = {
     dataRequested: boolean
     callback: (result: string) => void
     data?: string
+    toolbar?: ToolbarConfig
+    theme?: 'snow' | 'bubble'
+    readOnly?: boolean
+    variant?: 'compact' | 'spacious'
 }
 
 declare global {

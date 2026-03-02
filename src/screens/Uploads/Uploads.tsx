@@ -21,7 +21,7 @@ import {
     */
 } from './Uploads.styles'
 import { useNetwork } from 'context/NetworkContext'
-import { useTranslation } from 'hooks/useTranslations'
+// import { useTranslation } from 'hooks/useTranslations'
 import { PANNELS } from 'hooks/useTogglePannel/useTogglePannel'
 import { ScreenHeader } from 'components/ScreenHeader'
 import { Button } from 'components/Button'
@@ -34,7 +34,7 @@ const Menu = () => {
 }
 
 export const Uploads = () => {
-    const { t } = useTranslation()
+    // const { t } = useTranslation()
     const { schemaAPI } = useNetwork()
     const [dataRes, setDataRes] = useState('')
 

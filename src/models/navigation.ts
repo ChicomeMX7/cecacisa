@@ -9,8 +9,9 @@ export enum APP_PATH {
     ENDPOINTS = '/endpoints',
     UPLOAD = '/uploads',
     NODES = '/nodes',
-    LOGOUT = '/logout',
     USER = '/user',
+    LOGOUT = '/logout',
+    LOGIN = '/login',
 }
 
 export type NavigationAppType = {

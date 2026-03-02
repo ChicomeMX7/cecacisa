@@ -1,13 +1,13 @@
 import { Screen, ScreenContent, LeftSidePanel, SidePannel, PANNEL_ID } from 'components/Screen'
 // import {} from './NodeTrees.styles'
-import { useTranslation } from 'hooks/useTranslations'
+// import { useTranslation } from 'hooks/useTranslations'
 import { ScreenHeader } from 'components/ScreenHeader'
 import { SearchBar } from 'components/SearchBar'
 import { Button } from 'components/Button'
 import { PANNELS } from 'hooks/useTogglePannel/useTogglePannel'
 
 export const NodeTrees = () => {
-    const { t } = useTranslation()
+    // const { t } = useTranslation()
 
     const fake = function (): void {
         throw new Error('Function not implemented.')

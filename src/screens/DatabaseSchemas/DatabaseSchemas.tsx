@@ -1,13 +1,13 @@
 import { LeftSidePanel, PANNEL_ID, Screen, ScreenContent, SidePannel } from 'components/Screen'
 import { Container } from './DatabaseSchemas.styles'
-import { useTranslation } from 'hooks/useTranslations'
+// import { useTranslation } from 'hooks/useTranslations'
 import { SearchBar } from 'components/SearchBar'
 import { ScreenHeader } from 'components/ScreenHeader'
 import { PANNELS } from 'hooks/useTogglePannel/useTogglePannel'
 import { Button } from 'components/Button'
 
 export const DatabaseSchemas = () => {
-    const { t } = useTranslation()
+    // const { t } = useTranslation()
 
     return (
         <Screen pannel={PANNELS.SCHEMAS}>

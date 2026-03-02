@@ -1,39 +1,58 @@
+import Quill from 'quill'
 import { useEffect, useState, useRef } from 'react'
-import { useExternalScript } from 'hooks/useExternalScript'
+// import { useExternalScript } from 'hooks/useExternalScript'
 import { EditorContainer } from './CodeEditor.styles'
-import 'styles/styles.css'
-import { cleanFile, CODE, PASS, CodeEditorProps } from './CodeEditor.props'
+// import 'styles/styles.css'
+import 'quill/dist/quill.snow.css'
+import { cleanFile, /* CODE, PASS, */ CodeEditorProps } from './CodeEditor.props'
 import { useCleanInput } from 'hooks/useCleanInput'
 
 let htmlEditor: any = undefined
 
 export const CodeEditor = ({ callback, dataRequested, data }: CodeEditorProps) => {
     const { CleanCodeInput } = useCleanInput()
-    const editorReference = useRef<HTMLElement | null>(null)
+    const editorReference = useRef<HTMLDivElement>(null)
+    const quillInstance = useRef<any>(null)
+
+    useEffect(() => {
+        if (editorReference.current) {
+            quillInstance.current = new Quill(editorReference.current, {
+                theme: 'snow',
+                modules: {
+                    toolbar: [
+                        [{ font: [] }, { size: [] }],
+                        [{ align: [] }, 'direction'],
+                        ['bold', 'italic', 'underline', 'strike'],
+                        [{ color: [] }, { background: [] }],
+                        [{ script: 'super' }, { script: 'sub' }],
+                        ['blockquote', 'code-block'],
+                        [
+                            { list: 'ordered' },
+                            { list: 'bullet' },
+                            { indent: '-1' },
+                            { indent: '+1' },
+                        ],
+                        ['link', 'image', 'video'],
+                        ['clean'],
+                    ],
+                },
+            })
+        }
+
+        return () => {
+            quillInstance.current = null
+        }
+    }, [])
+
     const [editorConfigured, setEditorConfigured] = useState(false)
-    const [editorLoaded, setEditorLoaded] = useState(false)
-    const [editorRequires, setEditorRequires] = useState(PASS)
+    // const [editorLoaded, setEditorLoaded] = useState(false)
+    // const [editorRequires, setEditorRequires] = useState(PASS)
 
     const [editorData, setEditorData] = useState(data || cleanFile)
 
-    const handleEditorLoaded = (val: boolean) => {
-        setEditorLoaded(val)
-    }
-    function setUpEditor() {
-        htmlEditor = window.CodeMirror(document.querySelector('.editor .code .html-code'), {
-            mode: 'javascript',
-            value: editorData,
-            tabSize: 4,
-            lineNumbers: true,
-        })
-        window.CodeMirror.commands['selectAll'](htmlEditor)
-        editorReference.current?.addEventListener('keydown', (e) => {
-            if (e.ctrlKey && e.key === '/') {
-                e.preventDefault()
-                commentSelection(true)
-            }
-        })
-    }
+    // const handleEditorLoaded = (val: boolean) => {
+    //     setEditorLoaded(val)
+    // }
 
     const getSelectedRange = () => {
         return { from: htmlEditor.getCursor(true), to: htmlEditor.getCursor(false) }
@@ -58,42 +77,31 @@ export const CodeEditor = ({ callback, dataRequested, data }: CodeEditorProps) =
         }
     }
 
-    useExternalScript({
-        src: CODE.codemirror,
-        callback: () => {
-            setEditorRequires({ ...editorRequires, codemirror: true })
-            handleEditorLoaded(true)
-        },
-    })
-    useExternalScript({
-        src: CODE.formatting,
-        callback: () => {
-            setEditorRequires({ ...editorRequires, formatting: true })
-        },
-    })
-    useExternalScript({
-        src: CODE.showHint,
-        callback: () => {
-            setEditorRequires({ ...editorRequires, showHint: true })
-        },
-    })
-    useExternalScript({
-        src: CODE.javascript,
-        callback: () => {
-            setEditorRequires({ ...editorRequires, javascript: true })
-        },
-    })
-
-    useEffect(() => {
-        if (!editorReference.current) {
-            editorReference.current = document.getElementById('editor_container')
-            setTimeout(() => {
-                setUpEditor()
-            }, 1200)
-            setEditorConfigured(true)
-        }
-        return () => {}
-    }, [editorLoaded, editorConfigured])
+    // useExternalScript({
+    //     src: CODE.codemirror,
+    //     callback: () => {
+    //         setEditorRequires({ ...editorRequires, codemirror: true })
+    //         handleEditorLoaded(true)
+    //     },
+    // })
+    // useExternalScript({
+    //     src: CODE.formatting,
+    //     callback: () => {
+    //         setEditorRequires({ ...editorRequires, formatting: true })
+    //     },
+    // })
+    // useExternalScript({
+    //     src: CODE.showHint,
+    //     callback: () => {
+    //         setEditorRequires({ ...editorRequires, showHint: true })
+    //     },
+    // })
+    // useExternalScript({
+    //     src: CODE.javascript,
+    //     callback: () => {
+    //         setEditorRequires({ ...editorRequires, javascript: true })
+    //     },
+    // })
 
     useEffect(() => {
         if (htmlEditor) {
@@ -108,7 +116,7 @@ export const CodeEditor = ({ callback, dataRequested, data }: CodeEditorProps) =
             <div id="editor_container">
                 <div className="editor">
                     <div id="resizeMe" className="code">
-                        <div className="html-code"></div>
+                        <div id="editor" ref={editorReference}></div>
                     </div>
                 </div>
             </div>

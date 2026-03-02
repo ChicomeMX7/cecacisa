@@ -1,15 +1,13 @@
-# BEES: Content Manager
+# CECACISA: Content Manager
 
 ---
 
-![Icon](/src/assets/logo.png 'wiinkil')
+![Icon](/src/assets/logo.png 'cecacisa')
 
-This repo is the front UI for the content manager used in Mecuate Astrophytum.
-
-To clone this repo just use:
+front UI for bad CMS.
 
 ```
-    git clone git@github.com:Mecuate/bees.git
+    undefined
 ```
 
-Mecuate Astrophytum 2023
+2026

@@ -2,6 +2,7 @@ import { ComponentProps } from 'react'
 import { colors } from 'styles/colors'
 import { IconRoot } from './Icon.styles'
 import { IconNames } from './IconNames'
+import iconSprite from 'assets/icon-sprite.svg'
 
 type IconOwnProps = ComponentProps<typeof IconRoot>
 export type IconProps = IconOwnProps & {
@@ -32,7 +33,7 @@ export const Icon = ({
             viewBox={viewBox}
         >
             {label && <title>{label}</title>}
-            <use xlinkHref={`/src/icon-sprite.svg#${icon}`}></use>
+            <use xlinkHref={`${iconSprite}#${icon}`}></use>
         </IconRoot>
     )
 }

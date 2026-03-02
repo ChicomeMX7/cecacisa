@@ -51,7 +51,7 @@ export const LeftBarControler = () => {
                                 color={colors.PRIMARY}
                                 icon={icon}
                                 action={voidFn}
-                            ></Button.Action>
+                            />
                         </Link>
                     </span>
                 )

@@ -2,10 +2,10 @@ import { FC, ComponentProps } from 'react'
 import {
     NotificationContainer,
     NotificationContent,
-    CurveLine,
-    Division,
-    LineLeft,
-    LineRight,
+    // CurveLine,
+    // Division,
+    // LineLeft,
+    // LineRight,
 } from './Notification.styles'
 import { Icon, IconNames } from 'components/Icon'
 import { Typography } from 'components/Typography'

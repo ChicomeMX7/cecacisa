@@ -1,4 +1,4 @@
-import { LeftSidePanel, Screen, ScreenContent, SidePannel } from 'components/Screen'
+import { Screen, ScreenContent, SidePannel } from 'components/Screen'
 import { Typography } from 'components/Typography'
 import { Container } from './Dashboard.styles'
 import { useInstanceData } from 'hooks/useInstanceData'

@@ -17,7 +17,7 @@ function _main_() {
         result += comp
     }
     result += '</svg>'
-    fs.writeFileSync(path.resolve('./', 'public/src/icon-sprite.svg'), result)
+    fs.writeFileSync(path.resolve('./', 'src/assets/icon-sprite.svg'), result)
 
     console.log('result terminated')
 }

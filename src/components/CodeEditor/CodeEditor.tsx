@@ -1,8 +1,6 @@
 import Quill from 'quill'
 import { useEffect, useState, useRef } from 'react'
-// import { useExternalScript } from 'hooks/useExternalScript'
 import { EditorContainer } from './CodeEditor.styles'
-// import 'styles/styles.css'
 import 'quill/dist/quill.snow.css'
 import { useCleanInput } from 'hooks/useCleanInput'
 import type { CodeEditorProps } from './CodeEditor.props'

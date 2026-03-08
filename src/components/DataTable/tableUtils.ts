@@ -1,5 +1,5 @@
 import { PANNELS } from 'hooks/useTogglePannel/useTogglePannel'
-import { TableDataSet } from 'models'
+import { TableDataSet, RowDataTypes, SchemasRowData, HeaderTitlesType } from 'models'
 
 export type S = 'schemas' | undefined
 
@@ -32,6 +32,29 @@ const dataMaps = {
     [PANNELS.UNKNOWN]: ['name', 'changes', 'userReference'],
 }
 
-export const mapPrintables = (elems: TableDataSet, dm: PANNELS) => {
-    return dataMaps[dm].map((item) => elems[item as keyof TableDataSet])
+export const mapPrintables = (
+    elems: Partial<Pick<TableDataSet<RowDataTypes>, 'data'>> | undefined,
+    dm: PANNELS
+) => {
+    if (!elems) return [] as SchemasRowData[]
+    return dataMaps[dm].map(
+        (item) => elems[item as keyof Partial<Pick<TableDataSet<RowDataTypes>, 'data'>>]
+    )
+}
+
+export const mapHeaderTitles = (elems: undefined | Record<string, boolean>): HeaderTitlesType[] => {
+    if (!elems) return [] as HeaderTitlesType[]
+    const titles: HeaderTitlesType[] = []
+    const arr = Object.keys(elems)
+    for (let i = 0; i < arr.length; i++) {
+        const key = arr[i]
+        const title: HeaderTitlesType = {
+            label: `tables:headerTitle.${key}`,
+            visible: elems[key],
+            field: key,
+        }
+
+        titles.push(title)
+    }
+    return titles
 }

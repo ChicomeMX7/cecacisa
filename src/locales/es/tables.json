@@ -1,0 +1,16 @@
+{
+    "headerTitle": {
+        "uuid": "id",
+        "name": "nombre",
+        "description": "descripcion",
+        "properties": "propiedades",
+        "timesUsed": "en uso",
+        "lastChange": "modificado",
+        "createdAt": "creado",
+        "changedBy": "modificado por",
+        "createdBy": "creado por",
+        "parent": "padre",
+        "children": "hijos",
+        "locked": "bloqueado"
+    }
+}

@@ -4,51 +4,47 @@ import { Row } from './TableRow'
 import { TableDataSet } from 'models'
 
 type TableProps = {
-    data: TableDataSet[]
-    headerData: TableDataSet
+    data: TableDataSet<any>
     id?: string
-    checkable?: boolean
-    hasMenu?: boolean
-    editable?: boolean
     tableType?: PANNELS
 }
 
 export const DataTable = ({
     data,
-    headerData,
     id,
-    checkable,
     tableType,
-    hasMenu,
-    editable,
 }: TableProps) => {
     return (
         <Table id={id}>
+            <TableHeader>
+                <Row
+                    header={data.header}
+                    checkable={!data.locked}
+                    tableType={tableType}
+                    editMenu={data.hasMenu}
+                    isHeader
+                />
+            </TableHeader>
             <ScrollSection>
-                <TableHeader>
-                    <Row
-                        elements={headerData}
-                        checkable={checkable}
-                        tableType={tableType}
-                        editMenu={hasMenu}
-                        isHeader
-                    />
-                </TableHeader>
                 <RowSection>
-                    {data.map((row, i) => (
+                    {data.data.map((row, i) => (
                         <Row
-                            key={`row_line_${i}_${row.name}`}
+                            key={`row_line_${i}_${row.id}`}
                             idx={i}
                             elements={row}
-                            checkable={checkable}
+                            checkable={!row.locked}
                             tableType={tableType}
-                            editMenu={hasMenu}
-                            editable={editable}
+                            editMenu={!row.locked}
+                            editable={!row.locked}
                         />
                     ))}
                 </RowSection>
             </ScrollSection>
-            <BotomSection>DataTable</BotomSection>
+            <BotomSection>
+                <div>Filers</div>
+                <div>search</div>
+                <div>Pagination</div>
+            </BotomSection>
         </Table>
     )
 }

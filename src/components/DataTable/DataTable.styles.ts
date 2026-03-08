@@ -3,7 +3,7 @@ import { colors } from 'styles/colors'
 
 export const Table = styled('div', {
     display: 'grid',
-    gridTemplateRows: '1fr 32px',
+    gridTemplateRows: '68px 1fr',
     gridTemplateColumns: '1fr',
     gap: '0',
     padding: '$4',
@@ -15,10 +15,10 @@ export const Table = styled('div', {
 
 export const TableHeader = styled('div', {
     display: 'grid',
-    gridTemplateRows: '68px',
+    gridTemplateRows: '48px',
     gridTemplateColumns: '1fr',
     width: '100%',
-    height: '68px',
+    height: '58px',
     alignItems: 'center',
     background: colors.SURFACE[400],
     margin: 0,
@@ -27,7 +27,7 @@ export const TableHeader = styled('div', {
 
 export const ScrollSection = styled('div', {
     overflowX: 'scroll',
-    overflowY: 'hidden',
+    overflowY: 'scroll',
     margin: 0,
     padding: 0,
     display: 'grid',
@@ -98,20 +98,7 @@ export const RowElement = styled('div', {
                 background: colors.SURFACE[200],
             },
             odd: {
-                background: colors.SURFACE[100],
-            },
-        },
-        sizes: {
-            schemas: {
-                '& span:nth-child(3)': {
-                    width: '250px',
-                },
-                '& span:nth-child(4)': {
-                    width: '300px',
-                },
-                '& span:nth-child(5)': {
-                    width: '200px',
-                },
+                background: colors.SURFACE[300],
             },
         },
     },

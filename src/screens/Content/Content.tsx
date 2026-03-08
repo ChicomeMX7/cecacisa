@@ -4,19 +4,12 @@ import { PANNELS } from 'hooks/useTogglePannel/useTogglePannel'
 import { ScreenHeader } from 'components/ScreenHeader'
 import { Button } from 'components/Button'
 import { DataTable } from 'components/DataTable'
-import { TableDataSet } from 'models'
 import { useState } from 'react'
 import { schemasTestData } from 'fixtures/schemas'
 
 export const Content = () => {
-    const [head] = useState<TableDataSet>({
-        id: '',
-        name: 'Name',
-        changes: 'Changes',
-        userReference: 'byUser',
-    })
 
-    const [rowData] = useState<TableDataSet[]>(schemasTestData)
+    const [tableData] = useState(schemasTestData)
 
     return (
         <Screen pannel={PANNELS.CONTENT}>
@@ -24,20 +17,19 @@ export const Content = () => {
                 {'testing content'}
             </LeftSidePanel>
             <ScreenHeader
-                title={'Título de la tabla actual'}
+                title={tableData.title}
                 actions={
                     <>
+                        <Button.MainAction action={() => {}} text={'action1'} />
+                        <Button.MainAction action={() => {}} text={'action1'} />
                         <Button.MainAction action={() => {}} text={'action1'} />
                     </>
                 }
             ></ScreenHeader>
             <ScreenContent pannel={PANNELS.CONTENT}>
                 <DataTable
-                    headerData={head}
-                    data={rowData}
+                    data={tableData}
                     tableType={PANNELS.SCHEMAS}
-                    checkable
-                    hasMenu
                 />
             </ScreenContent>
             <SidePannel pannel={PANNELS.CONTENT}>

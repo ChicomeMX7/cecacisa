@@ -17,6 +17,18 @@ export const validTranslationKeys = {
         'common:leftPannelTitle.user': 'Perfil',
         'common:leftPannelTitle.uploads': 'Media',
         'endpoints:save': 'Guardar',
+        'tables:headerTitle.uuid': 'id',
+        'tables:headerTitle.name': 'nombre',
+        'tables:headerTitle.description': 'descripcion',
+        'tables:headerTitle.properties': 'propiedades',
+        'tables:headerTitle.timesUsed': 'en uso',
+        'tables:headerTitle.lastChange': 'modificado',
+        'tables:headerTitle.createdAt': 'creado',
+        'tables:headerTitle.changedBy': 'modificado por',
+        'tables:headerTitle.createdBy': 'creado por',
+        'tables:headerTitle.parent': 'padre',
+        'tables:headerTitle.children': 'hijos',
+        'tables:headerTitle.locked': 'bloqueado',
     },
 }
 
@@ -36,5 +48,17 @@ export type iKeyTranslations =
     | 'common:leftPannelTitle.user'
     | 'common:leftPannelTitle.uploads'
     | 'endpoints:save'
+    | 'tables:headerTitle.uuid'
+    | 'tables:headerTitle.name'
+    | 'tables:headerTitle.description'
+    | 'tables:headerTitle.properties'
+    | 'tables:headerTitle.timesUsed'
+    | 'tables:headerTitle.lastChange'
+    | 'tables:headerTitle.createdAt'
+    | 'tables:headerTitle.changedBy'
+    | 'tables:headerTitle.createdBy'
+    | 'tables:headerTitle.parent'
+    | 'tables:headerTitle.children'
+    | 'tables:headerTitle.locked'
 
 export type LangKeys = keyof typeof validTranslationKeys

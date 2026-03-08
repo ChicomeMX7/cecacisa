@@ -38,5 +38,5 @@ export const useTranslation = () => {
         return value
     }
 
-    return { t }
+    return { t, selectedLanguage, lang }
 }

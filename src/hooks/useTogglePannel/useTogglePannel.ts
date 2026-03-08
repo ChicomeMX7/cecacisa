@@ -1,13 +1,13 @@
 import { useState } from 'react'
 
 export enum PANNELS {
-    CONTENT = 'content',
-    SCHEMAS = 'schemas',
-    ENDPOINTS = 'endpoints',
-    UPLOADS = 'uploads',
-    NODES = 'nodes',
-    DASHBOARD = 'dashboard',
-    UNKNOWN = 'unknown',
+    CONTENT,
+    SCHEMAS,
+    ENDPOINTS,
+    UPLOADS,
+    NODES,
+    DASHBOARD,
+    UNKNOWN,
 }
 
 const initialRecords: Record<PANNELS, boolean> = {
